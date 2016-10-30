@@ -6,7 +6,7 @@ Annoyed for publish your image/files into other sharing hosting? You wanna share
 # Installation
 The installation process is the same for any Symfony bundles:
 
-`composer require nunopress/sf-sharex`
+`composer require nunopress/sf-sharex-bundle`
 
 Create new parameter into your `config.yml` with key `nunopress_sharex_secret` and value your `pc-name`.
 
@@ -16,6 +16,9 @@ parameters:
 ```
 
 Add into your `AppKernel` (_for standard edition_) or `MicroKernel` (_for Micro Edition_) the class bundle `NunoPress\ShareXBundle`.
+
+# ShareX Configuration
+_still in progress_
 
 # Support
 Send any question's or issue here on Github.
