@@ -7,12 +7,12 @@ use Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 # Composer autoloader
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 # New application
 $app = new Application([
-    'upload_dir' => __DIR__ . '/../uploads',
-    'upload_secret' => 'NUNOPRESS-PC'
+    'upload_dir'    => __DIR__ . '/uploads',
+    'upload_secret' => 'ThisIsASecretKey'
 ]);
 
 /**
