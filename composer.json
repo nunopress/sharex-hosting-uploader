@@ -1,0 +1,27 @@
+{
+  "name": "nunopress/silex-sharex-hosting-uploader",
+  "license": "MIT",
+  "type": "project",
+  "description": "Silex application for made ShareX hosting custom uploader.",
+  "keywords": ["silex", "sharex", "custom uploader", "hosting"],
+  "homepage": "https://nunopress.com",
+  "authors": [
+    {
+      "name": "NunoPress LLC",
+      "email": "hello@nunopress.com"
+    },
+    {
+      "name": "Fabien Potencier",
+      "email": "fabien@symfony.com"
+    },
+    {
+      "name": "Symfony Community",
+      "homepage": "https://symfony.com/contributors"
+    }
+  ],
+  "require": {
+    "silex/silex": "^2.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
