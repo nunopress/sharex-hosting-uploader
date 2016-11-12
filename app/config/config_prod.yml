@@ -1,0 +1,9 @@
+imports:
+    - { resource: config.yml }
+
+framework:
+    # Http Cache service
+    esi: ~
+    fragments: ~
+    trusted_proxies: [127.0.0.1, "::1"]
+    http_method_override: true

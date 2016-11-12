@@ -1,0 +1,11 @@
+imports:
+    - { resource: config.yml }
+
+framework:
+    # Enable Tests
+    test: ~
+
+# WebProfiler bundle
+web_profiler:
+    toolbar: false
+    intercept_redirects: false

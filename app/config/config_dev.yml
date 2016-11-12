@@ -1,0 +1,14 @@
+imports:
+    - { resource: config.yml }
+
+framework:
+    router:
+        resource: "%kernel.root_dir%/config/routing_dev.yml"
+        strict_requirements: true
+    # WebProfiler Bundle
+    profiler: { only_exceptions: false }
+
+# WebProfiler Bundle
+web_profiler:
+    toolbar: true
+    intercept_redirects: false

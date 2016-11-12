@@ -1,39 +1,66 @@
-# ShareX Custom Uploader for your domain
-Annoyed for publish your image/files into other sharing hosting? You wanna share images/files for your business with your domain? Is really simple now with this Silex application.
+Symfony Micro Edition
+=====================
 
-# Installation
-The installation process is the same for any composer project:
+Welcome to the Symfony Micro Edition - a stripped version of Symfony Standard Edition that you can use as the 
+skeleton for your new Api/Small applications.
 
-`composer create-project nunopress/silex-sharex-hosting-uploader`
+For install is really simple with Composer:
 
-You need to configure the application into `/bootstrap.php` and change this 2 lines:
+`composer create-project nunopress/sf-micro-edition project_name`
 
-```
-upload_dir: 'uploads',
-upload_secret: 'secret-key'
-```
+Difference from Standard Edition?
+---------------------------------
 
-That's all for the configuration process.
+I made the stripped/small version of Standard Edition without some bundles and configuration's.
 
-> __Note:__ inside the webroot `web` you found 3 files (_index.php, app.php and app_dev.php_), `app.php` and `index.php` are the same (_useful for who have configured Nginx with front controller index.php_) and `app_dev.php` with `$app['debug] = true` for debugging.
+In the few first releases I made a personal version of this with MicroKernel, but I get some feedback so I choose
+to come back to the Standard Edition and stripped for make more simple and fast (_with my benchmarks with the same
+application get 50% run much fast_).
 
-> __Note:__ the `.htaccess` is production ready, if you need to develop you need to change `index.php` front controller to `app_dev.php` controller or add manually `$app['debug] = true` to the application;
+The result is really nice, fast response, same folders, same code (_made only difference on Kernel_) and you 
+ready to come back to standard edition easy, you need only to add into composer the other default packages and 
+replace the MicroKernel and MicroCache with AppKernel and AppCache Standard Edition.
 
-# ShareX Configuration
-For configure ShareX you need to add the custom uploader and configure it, in the first place you need to add it:
+What's inside?
+--------------
 
-### Select destination
-![screenshot-1](https://screenshots.nunopress.com/view/31-10-2016-1477919829.png)
+The Symfony Micro Edition is configured with the following defaults:
 
-### Select destination settings
-![screenshot-2](https://screenshots.nunopress.com/view/31-10-2016-1477920010.png)
+  * Stripped Symfony AppKernel/AppCache (_renamed MicroKernel/MicroCache_);
+  
+  * An AppBundle you can use to start coding;
 
-### Configure custom uploader
-![screenshot-3](https://screenshots.nunopress.com/view/31-10-2016-1477920477.png)
+  * Twig as the only configured template engine;
 
-Select your custom uploader in the left bottom section.
+  * Setup "locale" parameters on installation.
+  
+  * Http Cache/Class Cache enabled in production with base configuration.
 
-Change the __secret__ value based on you Silex application `upload_secret` key.
+It comes pre-configured with the following bundles:
 
-You can change here the image name format, I like this `dd-mm-YYYY-{unixtime}.ext` if you like too leave it same i write.
+  * **FrameworkBundle** - The core Symfony framework bundle
 
+  * [**SensioFrameworkExtraBundle**][1] - Adds several enhancements, including
+    template and routing annotation capability
+
+  * [**TwigBundle**][2] - Adds support for the Twig templating engine
+
+  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
+    the web debug toolbar
+
+  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
+    configuring and working with Symfony distributions
+
+  * [**SensioGeneratorBundle**][3] (in dev/test env) - Adds code generation
+    capabilities
+
+  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+    integration
+
+All libraries and bundles included in the Symfony Micro Edition are released under the MIT or BSD license.
+
+Enjoy!
+
+[1]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+[2]:  https://symfony.com/doc/current/templating.html
+[3]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html

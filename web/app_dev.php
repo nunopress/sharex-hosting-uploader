@@ -1,14 +1,25 @@
 <?php
 
-/** @var \Silex\Application $app */
-$app = require_once __DIR__ . '/../bootstrap.php';
+use Symfony\Component\Debug\Debug;
+use Symfony\Component\HttpFoundation\Request;
 
-$app['debug'] = true;
+/** @var \Composer\Autoload\ClassLoader $loader */
 
-if (isset($app['http_cache'])) {
-    \Symfony\Component\HttpFoundation\Request::setTrustedProxies([ '127.0.0.1', '::1' ]);
+# Config autoload
+$loader = require __DIR__ . '/../app/autoload.php';
 
-    $app['http_cache']->run();
-} else {
-    $app->run();
-}
+# Enable Symfony Debug
+Debug::enable();
+
+# Create kernel instance
+$kernel = new MicroKernel('dev', true);
+
+# Create request instance
+$request = Request::createFromGlobals();
+
+# Give response instance
+$response = $kernel->handle($request);
+$response->send();
+
+# Bye!
+$kernel->terminate($request, $response);

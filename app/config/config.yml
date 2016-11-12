@@ -1,0 +1,21 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: "@AppBundle/Resources/config/services.yml" }
+
+framework:
+    # Framework Bundle
+    secret: "%kernel.secret%"
+
+    # Routing Configuration
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+
+    # Templating Service
+    templating:
+        engines: ['twig']
+
+# Twig Bundle
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
