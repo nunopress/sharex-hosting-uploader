@@ -1,8 +1,8 @@
 {
-  "name": "nunopress/sf-micro-edition",
+  "name": "nunopress/sharex-hosting-uploader",
   "license": "MIT",
   "type": "project",
-  "description": "The \"Symfony Micro Edition\" distribution",
+  "description": "ShareX custom uploader for your hosting/domain powered by Symfony Micro Edition",
   "require": {
     "php": ">=7.0.12",
     "symfony/symfony": "^3.2.0-BETA1",
