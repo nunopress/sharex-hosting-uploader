@@ -21,4 +21,5 @@
 # PhpStorm
 /.idea
 
-
+# Upload files
+/uploads/*

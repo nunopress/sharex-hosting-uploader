@@ -4,9 +4,9 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
 
 /**
- * Class MicroKernel
+ * Class AppKernel
  */
-class MicroKernel extends Kernel
+class AppKernel extends Kernel
 {
     /**
      * @return string

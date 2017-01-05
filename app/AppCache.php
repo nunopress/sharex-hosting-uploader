@@ -3,9 +3,9 @@
 use Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache;
 
 /**
- * Class MicroCache
+ * Class AppCache
  */
-class MicroCache extends HttpCache
+class AppCache extends HttpCache
 {
 
 }

@@ -12,7 +12,7 @@ $loader = require __DIR__ . '/../app/autoload.php';
 Debug::enable();
 
 # Create kernel instance
-$kernel = new MicroKernel('dev', true);
+$kernel = new AppKernel('dev', true);
 
 # Create request instance
 $request = Request::createFromGlobals();

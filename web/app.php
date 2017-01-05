@@ -16,19 +16,18 @@ if (function_exists('apcu_fetch')) {
 }
 
 # Create kernel instance
-$kernel = new MicroKernel('prod', false);
-$kernel->loadClassCache();
+$kernel = new AppKernel('prod', false);
+
+# Use class cache only when php version is lower of 7.x
+if (version_compare(phpversion(), "7.0.0", "<")) {
+    $kernel->loadClassCache();
+}
 
 # Create cache instance
-$kernel = new MicroCache($kernel);
+$kernel = new AppCache($kernel);
 
 # Create request instance
 $request = Request::createFromGlobals();
-
-# Setup reverse proxy
-Request::enableHttpMethodParameterOverride();
-//Request::setTrustedProxies([ '127.0.0.1', $request->server->get('REMOTE_ADDR') ]);
-//Request::setTrustedHeaderName(Request::HEADER_FORWARDED, null);
 
 # Give response instance
 $response = $kernel->handle($request);

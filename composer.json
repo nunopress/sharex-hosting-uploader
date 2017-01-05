@@ -5,7 +5,7 @@
   "description": "ShareX custom uploader for your hosting/domain powered by Symfony Micro Edition",
   "require": {
     "php": ">=7.0.12",
-    "symfony/symfony": "^3.2.0-BETA1",
+    "symfony/symfony": "^3.1",
     "sensio/framework-extra-bundle": "^3.0.2",
     "sensio/distribution-bundle": "^5.0",
     "incenteev/composer-parameter-handler": "^2.0"
@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": { "": "src/" },
-    "classmap": [ "app/MicroKernel.php", "app/MicroCache.php" ]
+    "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
   },
   "scripts": {
     "symfony-scripts": [
@@ -55,7 +55,7 @@
       "file": "app/config/parameters.yml"
     },
     "branch-alias": {
-      "dev-master": "3.2-dev"
+      "dev-master": "3.3-dev"
     }
   }
 }
